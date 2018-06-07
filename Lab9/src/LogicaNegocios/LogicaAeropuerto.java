@@ -4,20 +4,28 @@
  * and open the template in the editor.
  */
 package LogicaNegocios;
-import Interfaces.InterfazRemota;        
-import Modelo.Aeropuerto;
-import java.util.ArrayList;
+
 import AccesoDatos.AccesoDatosAeropuerto;
+import Interfaces.InterfazRemota;
+
 /**
  *
- * @author alulab14
+ * @author Bruno Espezúa
  */
 public class LogicaAeropuerto extends java.rmi.server.UnicastRemoteObject implements InterfazRemota{
-    public void listarAeropuertos(){
-        
+    private AccesoDatosAeropuerto acceso;
+    public LogicaAeropuerto() throws java.rmi.RemoteException{
+        acceso = new AccesoDatosAeropuerto();
     }
     
+    
+    @Override
+    public void listarAeropuertos(){
+        acceso.listarAeropuertos();
+    }
+    
+    @Override
     public void mostrarDatosAeropuertos(int id){
-        
+        acceso.mostrarDatosAeropuertos(id);
     }
 }

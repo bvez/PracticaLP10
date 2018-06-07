@@ -5,13 +5,13 @@
  */
 package Interfaces;
 
-import java.util.ArrayList;
-import Modelo.Aeropuerto;
+//import java.util.ArrayList;
+//import Modelo.Aeropuerto;
 /**
  *
  * @author alulab14
  */
 public interface InterfazRemota extends java.rmi.Remote{
-    public void listarAeropuertos();
-    public void mostrarDatosAeropuertos(int id);
+    public void listarAeropuertos() throws java.rmi.RemoteException;
+    public void mostrarDatosAeropuertos(int id) throws java.rmi.RemoteException;
 }
