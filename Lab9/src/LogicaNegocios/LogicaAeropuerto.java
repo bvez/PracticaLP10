@@ -7,6 +7,8 @@ package LogicaNegocios;
 
 import AccesoDatos.AccesoDatosAeropuerto;
 import Interfaces.InterfazRemota;
+import Modelo.Aeropuerto;
+import java.util.ArrayList;
 
 /**
  *
@@ -20,8 +22,8 @@ public class LogicaAeropuerto extends java.rmi.server.UnicastRemoteObject implem
     
     
     @Override
-    public void listarAeropuertos(){
-        acceso.listarAeropuertos();
+    public ArrayList<Aeropuerto> listarAeropuertos(){
+        return acceso.listarAeropuertos();
     }
     
     @Override

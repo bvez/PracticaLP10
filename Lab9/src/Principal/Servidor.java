@@ -14,6 +14,7 @@ public class Servidor {
     public static void main(String[] args){
         try{
             InterfazRemota ir = new LogicaAeropuerto();
+            System.out.println(java.net.InetAddress.getLocalHost().getHostAddress());
             java.rmi.Naming.rebind("//"+java.net.InetAddress.getLocalHost().getHostAddress()+":1234/rmi", ir);
         }
         catch(Exception e){

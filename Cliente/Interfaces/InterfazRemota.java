@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Interfaces;
-
 //import java.util.ArrayList;
-
-import Modelo.Aeropuerto;
-import java.util.ArrayList;
-
 //import Modelo.Aeropuerto;
+
 /**
  *
  * @author alulab14
  */
+package Interfaces;
+
+import java.util.ArrayList;
+import Modelo.Aeropuerto;
+
 public interface InterfazRemota extends java.rmi.Remote{
-    public ArrayList<Aeropuerto> listarAeropuertos() throws java.rmi.RemoteException;
-    public void mostrarDatosAeropuertos(int id) throws java.rmi.RemoteException;
+	public ArrayList<Aeropuerto> listarAeropuertos() throws java.rmi.RemoteException;
+	public void mostrarDatosAeropuertos(int id) throws java.rmi.RemoteException;
 }
