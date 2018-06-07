@@ -7,7 +7,7 @@
  *
  * @author alulab14
  */
-package Modelo;
+package modelo;
 
 import java.io.Serializable;
 
